@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                display: flex;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+                background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMEarKaydyzQzD6TXXRhgBPtDKWqs1TawM8NaxzWcy2g&s');
+                background-size: cover;
+                padding: 20px;
+                margin: 20px;
+            }
+
+            h1{
+                font-weight: normal;
+                font-size: 29px;
+                text-shadow: 0px 0px 2px;
+                padding-left: 20px;
+                padding-top: 20px;
+                padding-bottom: 5px;
+                margin-bottom: 10px;
+                margin-top: 0;
+            ;
+            }
+            .signup{
+            border: 1px solid black;
+            width: 450px;
+            height: 500px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px;
+            overflow: hidden;
+            background-image: url('https://i.pinimg.com/736x/7a/a3/64/7aa3643134d3671999f8d852ba7d8a6d.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            padding-right: 0;
+        }
+
+        .cursor{
+            width: 20px;
+            height: 20px;
+            border: 1px solid rgb(125, 85, 85);
+            background-color: rgba(124, 90, 90, 0.526);
+            border-radius: 50%;
+            position: absolute;
+            transition-duration:200ms ;
+            transition-timing-function: ease-out;
+        }
+
+        input{
+            background-color: rgba(255, 255, 255, 0.608);
+            height: 30px;
+            line-height: 40px;
+            border-radius: 15px;
+            padding: 0px 20px;
+            border: none;
+            margin-bottom: 20px;
+        
+        }
+
+        select{
+            background-color: rgba(255, 255, 255, 0.608);
+            height: 30px;
+            line-height: 40px;
+            border-radius: 15px;
+            padding: 0px 20px;
+            border: none;
+            margin-bottom: 20px ;
+        }
+        
+        textarea{
+            background-color: rgba(255, 255, 255, 0.608);
+
+            height: 100px;
+            line-height: 40px;
+            border-radius: 10px;
+            padding: 0px 20px;
+            border: none;
+            margin-bottom: 20px ;
+        }
+        
+        .remember-box {
+            padding: 50px;
+            margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            display: flex;
+        }
+        
+        button{
+            height: 40px;
+            line-height: 40px;
+            border-radius: 40px;
+            box-shadow: 0px 0px 5px rgba(88, 87, 87, 0.395);
+            font-size:12px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+            width: 85%;
+            margin-left: 20px;
+            margin-bottom: 7px;
+        }
+
+        button:hover{
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+
+        /* label{
+            text-transform: uppercase;
+            font-size: 15px;
+            letter-spacing: 2px;
+            padding-left: 10px;
+            border: none;
+        } */
+
+        </style>
+       <title>signup-page
+       </title>
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="signup">
+        <form action="/signupprocess.jsp" method="post">
+            <h1>SIGN UP</h1>
+            <table>
+                <tr>	
+                    <td><input type="text" name="username" value="" placeholder="First name"></td>
+                    <td><input type="text" name="username" value="" placeholder="Last name"></td>
+                </tr>
+            </table>
+                <input type="email" name="email" value="" placeholder="someone@gmail.com" style="width: 82%;">
+                
+                <input type="password" name="password" value="" placeholder="password" style="width: 82%;">
+                <input type="password" name="password" value="" placeholder="comfirm password" style="width: 82%;">
+                
+                <textarea cols="20" rows="4" placeholder="enter your comment here" style="width: 82%;"></textarea>
+                <!-- <div class="remember-box">
+                    <table>
+                        <tr>
+                    <td><input type="checkbox" name="remember" id="remember"></td>
+                    <td><p>I accept the Terms of Use & Privacy Policy</p></td>
+                </tr>
+                </table> -->
+                <button type="submit">SIGN UP</button>
+                <p style="margin-left: 100px;">Already have an account?<a href="login.html" style="color: black;">log in now</a></p>
+                </form>
+        </div>
+    </table>
+        <div class="cursor">
+            <script>
+                const cursor = document.querySelector('.cursor');
+                document.addEventListener('mousemove', e => {
+                    cursor.setAttribute("style", "top: "+ (e.pageY-20) + "px; left: "+ (e.pageX-20) + "px;")
+                    
+                });
+            </script>
+        </div>
+    </body>
+</html>
