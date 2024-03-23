@@ -62,7 +62,7 @@ ul li ul{
 
 ul li ul li{
 display: block;
-   border-top: 1px solid black;
+   border-bottom: 1px solid black;
    
 }
 
