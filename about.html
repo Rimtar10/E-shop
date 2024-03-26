@@ -1,11 +1,204 @@
 <!DOCTYPE html>
 <html>
     <head>
-       <link rel="stylesheet" type="text/css" href="style.css">
-       <title></title>
+       <title>about-us</title>
        <meta name="viewport" content="width=device-width, initial-scale=1">
+ <style>
+       body{
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMEarKaydyzQzD6TXXRhgBPtDKWqs1TawM8NaxzWcy2g&s');
+        /* color: hsl(0, 0%, 100%); */
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    .london{
+        color: black;
+        font-size: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -15px;
+        margin-bottom: 25px ;
+    }
+    
+    .jess {
+        font-size: 150%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .image {
+       width: 35%;
+       border-radius: 50%;
+       display: flex;
+      /*  flex-direction: column;  */
+       justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    
+    .black-box{
+        background-image: url('https://i.pinimg.com/736x/7a/a3/64/7aa3643134d3671999f8d852ba7d8a6d.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3%;
+        padding: 40px;
+        display: table;
+        border: 1px solid black;
+        border-radius: 15px;
+        box-shadow: 0px 0px 20px black;
+         /* overflow: hidden; */
+    }
+    
+    .github{
+        background-color: rgba(255, 255, 255, 0.608);
+         height: 40px;
+        line-height: 40px;
+        border-radius: 20px;
+        padding: 0px 20px;
+        border: none;
+        margin-bottom: 20px ;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+    }
+    
+    
+    .insta{
+        background-color: rgba(255, 255, 255, 0.608);
+         height: 40px;
+        line-height: 40px;
+        border-radius: 20px;
+        padding: 0px 20px;
+        border: none;
+        margin-bottom: 20px ;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+    }
+    
+
+    .linked{
+        background-color: rgba(255, 255, 255, 0.608);
+         height: 40px;
+        line-height: 40px;
+        border-radius: 20px;
+        padding: 0px 20px;
+        border: none;
+        margin-bottom: 20px ;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+    }
+    
+    .twitter{
+        background-color: rgba(255, 255, 255, 0.608);
+         height: 40px;
+        line-height: 40px;
+        border-radius: 20px;
+        padding: 0px 20px;
+        border: none;
+        margin-bottom: 20px ;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+    }
+
+    .home{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        padding-top: 20px;
+        font-size: smaller;
+    }
+
+    h1{
+            font-weight: normal;
+            font-size: 29px;
+            text-shadow: 0px 0px 1px;
+           
+        }
+
+        .twitter:hover {
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+
+        .insta:hover {
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+
+        .linked:hover {
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+
+        .github:hover {
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+
+        .cursor{
+            width: 20px;
+            height: 20px;
+            border: 1px solid rgb(125, 85, 85);
+            background-color: rgba(124, 90, 90, 0.526);
+            border-radius: 50%;
+            position: absolute;
+            transition-duration:200ms ;
+            transition-timing-function: ease-out;
+        }
+
+    
+</style>
+
     </head>
     <body>
-        
+        <div class="black-box">
+            <h1>About Us:</h1>
+            <!-- <img class= "image" src="./assets/images/avatar-jessica.jpeg" alt="Éclat"> -->
+            <p class="jess"></p>
+            <p class="london"><b>Beirout, Lebanon</b></p>
+            <p class="front">"Unlock Your Radiance, Embrace Your Beauty!"</p>
+            <a class="github" href="https://github.com/Rimtar10">GitHub</a>
+            <a class="linked" href="https://www.linkedin.com/feed/">LinkedIn</p>
+            <a class="twitter" href="https://twitter.com/?lang=en">X</a>
+            <a class="insta" href="https://www.instagram.com/">Instagram</a>
+            <a class="home" href="index.html">return Home</a>
+          </div>
+
+          <div class="cursor">
+            <script>
+                const cursor = document.querySelector('.cursor');
+                document.addEventListener('mousemove', e => {
+                    cursor.setAttribute("style", "top: "+ (e.pageY-20) + "px; left: "+ (e.pageX-20) + "px;")
+                    
+                });
+            </script>
+        </div>
     </body>
 </html>
