@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .laneige{
+                background-color: black;
+                color: white;
+                padding-top: 1px;
+                padding-bottom:1px;
+                border-radius: 5px;
+            }
+            
+            body{
+                margin: 0;
+            }
+
+
+            .floral{
+                background-color: rgba(226, 186, 186, 0.729);
+                padding-top: 1px;
+                padding-bottom:1px;
+                border-radius: 5px;
+            }
+
+
+            img {
+            transition: transform 0.3s ease-in-out; 
+            }
+
+            img:hover {
+            transform: scale(1.1); /* Increase the size of the image by 10% when hovered */
+            }
+
+            .cursor{
+            width: 15px;
+            height: 15px;
+            background-color: rgba(124, 90, 90, 0.526);
+            border-radius: 50%;
+            position: absolute;
+            transition-duration:200ms ;
+            transition-timing-function: ease-out;
+            }
+                
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center; font-size: 50px; background-color: bisque; padding: 20px;">All you need to remove your eyes dark circles!</h1>
+        <table>
+            <tr>
+                <td>
+                    <figure>
+                        <a href="black.html" style="color: black;">
+                          <img class="image1" src="https://www.sephora.com/productimages/sku/s2280428-main-zoom.jpg?imwidth=612" alt="eye cream" style="width: 300px; height: 250px;border-radius: 5px; z-index: 0;">
+                           <figcaption style="font-size: 125%; margin-top: 10px;"><div class="laneige"><p style="display: flex; justify-content: center; align-items: center;">The inkey list dark circle brightening</p><p style="padding-top:0 ; display: flex; justify-content: center; align-items: center;">$13.00</p></div></figcaption>
+                        </a>
+                    </figure>
+                    
+                </td>
+                
+    
+                <td>
+                    <figure>
+                    
+                        <a href="glossier.html" style="color: black;">
+                          <img class="image1" src="https://www.sephora.com/productimages/sku/s2737682-main-zoom.jpg?imwidth=375" alt="face mask" style="width: 300px; height: 250px;border-radius: 5px; z-index: 0;">
+                           <figcaption style="font-size: 125%; margin-top: 10px;"><div class="floral"><p style="display: flex; justify-content: center; align-items: center;">Glossier Brightening Cream</p><p style="padding-top:0 ; display: flex; justify-content: center; align-items: center;">$28.00</p></div></figcaption>
+                        </a>
+                    </figure>
+                    
+                </td>
+            </tr>
+        </table>
+            
+       <a href="index.html" style="font-size: 20px; color: black; border-radius: 20px; display: flex; justify-content: center; align-items: center; margin-top: 60px;" >RETURN HOME</a>
+            
+       <div class="cursor">
+        <script>
+            const cursor = document.querySelector('.cursor');
+            document.addEventListener('mousemove', e => {
+                cursor.setAttribute("style", "top: "+ (e.pageY-20) + "px; left: "+ (e.pageX-20) + "px;")
+                
+            });
+        </script>
+    </div>
+        
+    
+        
+    </body>
+</html>
