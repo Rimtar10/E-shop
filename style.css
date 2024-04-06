@@ -1,10 +1,21 @@
-nav{
+.nav{
     margin: 10px;
     font-size: 20px;
     font-family: 'poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: nav-load 300ms ease-in; /*slower at the beginning*/
+}
+
+@keyframes nav-load{
+    0%{
+        transform: translateY(-100%);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
 }
 
 ul{
@@ -12,6 +23,7 @@ ul{
     margin: 0;
     padding: 0;
    /*  font-size: 20px; */
+   z-index: 2;
 }
 
 ul :hover{
@@ -20,17 +32,24 @@ ul :hover{
 }
 
 
-ul li{
+/* ul li{
     display: inline-block;
     position: relative;
-}
+} */
 
 ul li {
     position: relative;
     display: inline-block;
-
+   /*  animation: nav-load 350ms ease-in; */
+    z-index: 2;
+    animation-name: nav-link-load;
+    animation-duration: var(--nav-link-load-time);
+    animation-timing-function: ease-in;
+    animation-delay: 350ms;
+    animation-fill-mode: forwards;
+    transform: scale(0);
 }
-
+ 
 ul li::after {
     content: '';
     position: absolute;
@@ -102,13 +121,20 @@ nav li:hover > ul {
     top: 26px;
     left: 10px;
     width: 10px;
+   /*  animation: nav-load 300ms ease-in; */
+   animation-name: nav-link-load;
+    animation-duration: var(--nav-link-load-time);
+    animation-timing-function: ease-in;
+    animation-delay: 350ms;
+    animation-fill-mode: forwards;
+    transform: scale(0);
 }
 
 
 button {
     position: fixed; /* Add this line */
     top: 15px;
-    right: 10px;
+    right: 20px;
     height: 40px;
     width: 80px;
     line-height: 40px;
@@ -121,12 +147,34 @@ button {
     border: none;
     padding-bottom: 0;
     color: black;
+    animation: nav-load 350ms ease-in;
+    z-index: 2;
 }
 
 button a{
     text-decoration: none;
     color: black;
     display: inline-block;
+    animation-name: nav-link-load;
+    animation-duration: var(--nav-link-load-time);
+    animation-timing-function: ease-in;
+    animation-delay: 350ms;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+}
+
+@keyframes nav-link-load{
+    0%{
+    transform: scale(0);
+    }
+
+    90%{
+        transform: scale(1.1);
+    }
+
+    100%{
+        transform: scale(1);/*100%*/
+    }
 }
 
 button:hover{
@@ -135,17 +183,22 @@ button:hover{
 }
 
 header{
-    background-color: rgb(198, 153, 114);
-    color: white;
+    background-color: rgb(255,237,225,255);
+    color: black;
     text-align: center;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
     font-size: 50px;
     font-family: 'poppins', sans-serif;
+    animation: nav-load 300ms ease-in;
+    
 }
 
 
 body{
     margin: 0;
+    --nav-link-load-time:500ms;
+   /*  --load-delay: calc(var(--nav-link-load-time)+300ms);   */
 }
 
 .cursor{
@@ -160,21 +213,70 @@ body{
 }
 
 
-.search-bar {
-    width: 200px; 
+/* .search-bar {
+    width: 300px; 
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-top: 8px; 
-    /* margin-left: 300px; */
+    animation-name: nav-link-load;
+    animation-duration: var(--nav-link-load-time);
+    animation-timing-function: ease-in;
+    animation-delay: 350ms;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+} */
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-
 .search-container {
-    margin-left: 1200px;
-    display: flex;
-    justify-content: center;
+  /*   margin-left: 1200px; */
+   display: flex;
+  /*  justify-content: center; */
+   align-items: center;
+   width: 350px;
+   height: 10px;
+   border-radius: 30px;
+   background-color: rgba(214, 176, 182, 0.771) ;
+   padding: 20px;
+   margin: 10px;
+   animation-name: nav-link-load;
+   animation-duration: var(--nav-link-load-time);
+   animation-timing-function: ease-in;
+   animation-delay: 350ms;
+   animation-fill-mode: forwards;
+   transform: scale(0); 
+}
+
+.search-container > i{
+     font-size: 20px;
+     color: #777;
+}
+
+.search-container > input{
+    flex: 1; /*same width as whole box*/
+    border: none;
+    font-size: 18px;
+    height: 20px;
+    background-color: transparent;
+    outline: none;
+}
+
+@keyframes load-delay{
+    0%{
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 
 
@@ -190,10 +292,53 @@ body{
     border-radius: 25%;
     z-index: 3;
     transition: transform 0.4s ease-in-out; 
+    animation: nav-load 300ms ease-in;
 }
 
 .image:hover {
     transform: scale(1.2);
 }
 
+.par{
+    font-size: 30px;
+    animation: load-delay 300ms ease-in 600ms;
+    animation-fill-mode: forwards;
+    transform: translateY(-30%);
+    opacity: 0;
+    font-family: 'Times New Roman', Times, serif;
+    /* animation-duration: 900ms;
+    animation-timing-function: ease-in;
+    animation-delay: 300ms;
+    animation-fill-mode: forwards;
+   animation-name: nav-par-load; ;
+   transform: translateX(-1000%); */
+}
+
+@keyframes nav-par-load{
+    0%{
+    transform: translateX(-1000%);
+    }
+
+    90%{
+        transform: translateX(50%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+.sohati{
+    margin: 10px;
+    width: 98.5%;
+    cursor: pointer;
+    /* animation-name: nav-link-load;
+   animation-duration: var(--nav-link-load-time);
+   animation-timing-function: ease-in;
+   animation-delay: 350ms;
+   animation-fill-mode: forwards;
+   transform: scale(0);  */
+   z-index: 0;
+}
 

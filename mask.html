@@ -51,11 +51,120 @@
             transition-duration:200ms ;
             transition-timing-function: ease-out;
             }
+
+         /*    :root{
+    --bar-width: 60px;
+    --bar-height:8px;
+    --hamburger-gap: 6px;
+    --forground: rgba(163, 129, 99, 0.779);
+   --background: #333; 
+   --animation-timing: 200ms ease-in-out ;
+   --ham-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+
+.hamburger{
+    --x-width:calc(var(--ham-height) * 1.41421356237); lenght of the x
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    width: max-content;
+    position: absolute;
+    top: 60px;
+   left: 8px;
+   z-index: 2;
+   cursor: pointer;
+}
+
+.hamburger:has(input:checked){
+    --foreground: white;
+    --background: #333
+}
+
+.hamburger::before,
+.hamburger::after,
+.hamburger input{
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--forground);
+    border-radius: 9999px;
+    transform-origin: left center ;
+    transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing), translate var(--animation-timing), background-color var(--animation-timing);
+}
+
+.hamburger input{
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+   pointer-events: none; 
+}
+
+.hamburger:has(input:checked)::before{ if the input is checked, then do this with the before element 
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2) ;
+}
+
+.hamburger:has(input:checked)::after{ /*if the input is checked, then do this with the after element 
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2) ;
+}
+
+
+.hamburger input:checked{
+    opacity: 0;
+    width: 0;
+} 
+
+.sidebar{
+    transition: translate var(--animation-timing);
+   translate: -100%; 
+   padding: 0.5rem 1rem;
+   padding-top: calc(var(--ham-height) + 8px + 1rem);
+   background-color: var(--forground);
+   color: var(--background);
+   max-width: 10rem;
+   min-height: 100vh;
+   
+   
+}
+
+.hamburger:has(input:checked) + .sidebar{
+    translate: 0;
+}
+
+.container{
+    display: flex;
+
+
+
+a{
+    color: #333;
+    font-size: larger;
+} */
                 
         </style>
     </head>
     <body>
         <h1 style="text-align: center; font-size: 50px; background-color: bisque; padding: 20px;">OUR MASKS</h1>
+<div class="container">
+        <!-- <label class="hamburger">
+            <input type="checkbox">
+         </label>
+         <aside class="sidebar">
+           <nav>
+             <div><a href="index.html">home</a></div>
+             <div><a href="mask.html">masks</a></div>
+             <div><a href="lip.html">lips</a></div>
+             <div><a href="dark.html">dark circles</a></div>
+             <div><a href="eyelashes.html">eyelashes</a></div>
+             <div><a href="brows.html">brows</a></div>
+             <div><a href="hair.html">hair</a></div>
+           </nav>
+         </aside> -->
+
         <table>
             <tr>
                 <td>
@@ -106,9 +215,9 @@
             
         </table>
             
-       <a href="index.html" style="font-size: 20px; color: black; border-radius: 20px; display: flex; justify-content: center; align-items: center; margin-top: 60px;" >RETURN HOME</a>
+   <a href="index.html" style="font-size: 20px; color: black; border-radius: 20px; display: flex; justify-content: center; align-items: center; margin-top: 60px;" >RETURN HOME</a>
             
-       <div class="cursor">
+      <!--  <div class="cursor">
         <script>
             const cursor = document.querySelector('.cursor');
             document.addEventListener('mousemove', e => {
@@ -116,9 +225,9 @@
                 
             });
         </script>
-    </div>
+    </div> -->
         
-    
+    </div>
         
     </body>
 </html>
