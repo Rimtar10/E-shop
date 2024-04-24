@@ -1,5 +1,6 @@
 .nav{
     margin: 10px;
+    margin-bottom: 20px;
     font-size: 20px;
     font-family: 'poppins', sans-serif;
     display: flex;
@@ -77,11 +78,12 @@ ul li ul{
     position: absolute;
     width: 200px;
     display: none;
+    margin-left: 0;
 }
 
 ul li ul li{
 display: block;
-   border-bottom: 1px solid black;
+border-bottom: 1px solid black;
    
 }
 
@@ -132,7 +134,7 @@ nav li:hover > ul {
 
 
 .button {
-    position: fixed; /* Add this line */
+    position: absolute; /* Add this line */
     top: 15px;
     right: 20px;
     height: 40px;
@@ -542,6 +544,7 @@ footer{
     font-family: 'poppins', sans-serif;
     animation: nav-load 300ms ease-in;
     padding-bottom: 20px;
+    
 }
 
 .new{
@@ -565,12 +568,12 @@ footer{
      padding: 5px;
      margin: 20px;
      border-bottom: 1px solid #777;
-     animation-name: nav-link-load;
+     /* animation-name: nav-link-load;
      animation-duration: var(--nav-link-load-time);
      animation-timing-function: ease-in;
      animation-delay: 350ms;
      animation-fill-mode: forwards;
-     transform: scale(0); 
+     transform: scale(0);  */
   }
   
   .search > i{
@@ -591,7 +594,6 @@ footer{
   .bu {
    
     line-height: 40px;
-   
     margin: 20px;
     box-shadow: 0px 0px 10px rgba(88, 87, 87, 0.395);
     font-size:12px;
@@ -630,3 +632,66 @@ footer{
 .ta {
     cursor: pointer;
 }
+
+.shop{
+     display: flex;
+        justify-content: center;
+}
+
+.top1 {
+    float: right;
+    position: fixed;
+    z-index: 3;
+    right: 0;
+    margin-top: 210px;
+    font-size:medium;
+    background-color: rgb(220, 198, 180);
+    border: none;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out; 
+    animation: nav-load 300ms ease-in;
+}
+
+ .top1:hover {
+    transform: scale(1.13);
+} 
+
+/*.carousel-control-prev-icon,
+.carousel-control-next-icon,
+.carousel-indicators {
+    filter: invert(1); 
+}
+
+/*.carousel-control-prev-icon {
+    position: absolute;
+    left: 5px;  Adjust this value to move the left arrow further to the left 
+}
+
+.carousel-control-next-icon {
+    position: absolute;
+    right: 5px; /* Adjust this value to move the right arrow further to the right */
+
+
+    .top2 {
+        float: right;
+        position: fixed;
+        z-index: 3;
+        right: 0;
+        margin-top: 150px;
+        font-size: larger;
+        background-color: rgba(242, 219, 200, 0.897);
+        border: none;
+        padding: 10px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        cursor: pointer;
+        transition: transform 0.4s ease-in-out; 
+        animation: nav-load 300ms ease-in;
+    }
+    
+     .top2:hover {
+        transform: scale(1.13);
+    } 
