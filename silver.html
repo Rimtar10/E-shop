@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <style>
+         button{
+            height: 40px;
+            line-height: 40px;
+            border-radius: 40px;
+            box-shadow: 0px 0px 5px rgba(88, 87, 87, 0.395);
+            font-size:12px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+            width: 30%;
+            margin-top: 20px;
+            margin-bottom: 7px;
+        }
+
+        button:hover{
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+
+        button a{
+            text-decoration: none;
+            color: rgb(54, 51, 51);
+        }
+
+        button a:hover{
+            color: white;
+        }
+
+        .image{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .image p{
+            width: 30%;
+            font-size: 17px;
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        .cursor{
+            width: 15px;
+            height: 15px;
+            background-color: rgba(124, 90, 90, 0.526);
+            border-radius: 50%;
+            position: absolute;
+            transition-duration:200ms ;
+            transition-timing-function: ease-out;
+        }
+
+
+       </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> <!-- bootstrap -->
+    </head>
+    <body>
+        <h1 style="background-color: silver; display: flex;  justify-content: center; align-items: center; padding: 20px; color: black;">Benefit Cosmetics Precisely, My Brow Tinted Eyebrow Wax</h1>
+        <div class="arrow" style="position: absolute;
+        top: 30px;
+        left: 20px;
+        height: px;
+       /*  width: 80px;
+        line-height: 40px; */
+        border-radius: 40px;
+        margin: 10px 0px;
+        font-size:38px;
+        cursor: pointer;
+        padding-bottom: 0;
+        color: black;
+        text-decoration: none;
+        animation: nav-load 350ms ease-in;
+        z-index: 2;">
+        <a style="text-decoration: none; color:black;" href="brows.html">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </a>
+            </div>
+        <div class="image">
+            <img src="https://www.sephora.com/productimages/sku/s2744811-main-zoom.jpg?imwidth=612" alt="face mask" style="width: 400px; height: 350px;border-radius: 5px;">
+            <p>A lightweight, full-pigment sculpting brow wax that precisely sculpts and holds brows in place.</p>
+            <button type="submit"><a href="index.html">ADD TO CART</a></button>
+        </div>
+
+       <!--  <div class="cursor">
+            <script>
+                const cursor = document.querySelector('.cursor');
+                document.addEventListener('mousemove', e => {
+                    cursor.setAttribute("style", "top: "+ (e.pageY-20) + "px; left: "+ (e.pageX-20) + "px;")
+                    
+                });
+            </script>
+        </div> -->
+    </body>
+</html>
